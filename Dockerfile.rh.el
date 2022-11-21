@@ -52,8 +52,8 @@ ENV NEXUS_HOME=${SONATYPE_DIR}/nexus \
 RUN yum install -y java-1.8.0-openjdk-headless \
     && yum clean all \
     && rm -rf /var/cache/yum \
-    && groupadd --gid 200 -r nexus \
-    && useradd --uid 200 -r nexus -g nexus -s /bin/false -d /opt/sonatype/nexus -c 'Nexus Repository Manager user'
+    && groupadd --gid 1105250000 -r nexus \
+    && useradd --uid 1105250000 -r nexus -g nexus -s /bin/false -d /opt/sonatype/nexus -c 'Nexus Repository Manager user'
 
 # Red Hat Certified Container commands
 COPY rh-docker /
